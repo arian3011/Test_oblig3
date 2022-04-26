@@ -1,10 +1,10 @@
 $(function (){
-    hentAlleBilletter();
+    hentFilmer();
 });
 
-function hentAlleBilletter(){
-    $.get("/hentBilletter", function(billetter) {
-        formaterBilletter(billetter);
+function hentFilmer(){
+    $.get("/hentFilmer", function(filmer) {
+        formaterFilmer(filmer);
     });
 }
 

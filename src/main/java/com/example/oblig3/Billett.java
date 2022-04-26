@@ -1,6 +1,6 @@
 package com.example.oblig3;
 
-public class Billett {
+public class Billett implements Comparable<Billett>{
     private String antall;
     private String fornavn;
     private String etternavn;
@@ -41,4 +41,9 @@ public class Billett {
         public String getValgtFilm() { return valgtFilm; }
 
         public void setValgtFilm(String valgtFilm) { this.valgtFilm = valgtFilm; }
+
+    @Override
+    public int compareTo(Billett billett) {
+        return this.getEtternavn().compareTo(billett.getEtternavn());
     }
+}

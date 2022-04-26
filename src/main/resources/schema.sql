@@ -1,0 +1,20 @@
+CREATE TABLE billett
+(
+    id INTEGER AUTO_INCREMENT NOT NULL,
+    antall VARCHAR(255) NOT NULL,
+    fornavn VARCHAR(255) NOT NULL,
+    etternavn VARCHAR(255) NOT NULL,
+    telefon VARCHAR(255) NOT NULL,
+    epost VARCHAR(255) NOT NULL,
+    valgtFilm VARCHAR(255) NOT NULL,
+
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE filmer
+(
+    id INTEGER AUTO_INCREMENT NOT NULL,
+    tittel VARCHAR(255) NOT NULL,
+    director VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);

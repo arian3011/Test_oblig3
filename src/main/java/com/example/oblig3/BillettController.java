@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 @RestController
 public class BillettController {
     @Autowired
@@ -23,13 +22,12 @@ public class BillettController {
 
     @GetMapping("/hentFilmer")
     public List<Film> hentFilmer() {
-        List<Film> listFilmer = new ArrayList<>();
-        listFilmer.add(new Film("The Matrix","L.Wachowski"));
-        listFilmer.add(new Film("The Batman","M.Reeves"));
-        listFilmer.add(new Film("Spider-Man","J.Watts"));
-        return listFilmer;
+//        List<Film> listFilmer = new ArrayList<>();
+//        listFilmer.add(new Film("The Matrix","L.Wachowski"));
+//        listFilmer.add(new Film("The Batman","M.Reeves"));
+//        listFilmer.add(new Film("Spider-Man","J.Watts"));
+        return rep.hentFilmer();
     }
-
     @PostMapping("/lagreBillett")
     public void lagreBillett(Billett innBillett) {
         rep.lagreBillett(innBillett);
@@ -37,6 +35,5 @@ public class BillettController {
 
     @GetMapping("/slettAlleBilletter")
     public void slettAlleBilletter() {
-        rep.slettAlleBilletter();
-    }
+        rep.slettAlleBilletter(); }
 }
